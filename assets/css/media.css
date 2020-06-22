@@ -1,0 +1,923 @@
+/* Содержание
+=====================================================================
+
+   TOC:
+   a. Стили 1300
+      - 1300 общие
+      - 1300 шапка
+      - 1300 мобильное меню
+      - 1300 список меню
+      - 1300 пункты списка
+      - 1300 активный класс мобильного меню
+      - 1300 выпадающее меню
+      - 1300 вступительная
+      - 1300 добро пожаловать
+      - 1300 форма консультации
+      - 1300 страница портфолио
+      - 1300 страница контакты
+   b. Стили 992.
+      - 992 общие
+      - 992 вступительная
+      - 992 страница услуги
+      - 992 страница портфолио
+      - 992 страница работа
+      - 992 страница контакты
+   c. Стили 800.
+      - 800 вступительная
+      - 800 добро пожаловать
+      - 800 обо мне
+      - 800 отзывы
+   d. Стили 768.
+      - 768 вступительная
+      - 768 добро пожаловать
+      - 768 последние статьи
+   e. Стили 600.
+      - 600 общие
+      - 600 общие для заголовков h
+      - 600 вступительная
+      - 600 страница блог
+      - 600 страница портфолио
+      - 600 работа
+      - 600 навигация по постам
+      - 600 подвал
+      - 600 страница контакты форма
+   f. Стили 500.
+      - 500 общие
+      - 500 шапка
+      - 500 вступительная
+      - 500 добро пожаловать
+      - 500 одна работа
+      - 500 мои отзывы
+      - 500 фото клиента
+      - 500 имя клиента
+      - 500 последние посты
+   g. Стили 400 
+      - 400 общие
+      - 400 заголовок
+      - 400 добро пожаловать
+      - 400 мои проекты
+      - 400 подвал
+      - 400 портфолио
+
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. Стили 1300.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 1300px) {
+   /* общие */
+   .wrapper {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+
+   .no_home_page {
+      padding-top: 20px;
+   }
+   /* 1300 шапка */
+   .header {
+      height: 50px;
+   }
+
+   .hamburger {
+      display: block;
+      padding: 0;
+   }
+
+   /* 1300 мобильное меню */
+   .header_menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: #181818;
+      padding: 120px 10px 50px 10px;
+      width: 100%;
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: all, 0.56s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -o-transition: all, 0.56s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all, 0.56s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+
+   /* 1300 список меню */
+   .header_menu ul {
+      text-align: center;
+      padding: 0;
+      width: 100%;
+      margin: 0 auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+   }
+
+   /* 1300 пункты списка */
+   .header_menu ul li {
+      width: 100%;
+      font-size: 18px;
+      opacity: 0;
+      margin-right: 0;
+      margin-bottom: 15px;
+      -webkit-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      transform: translateY(-15px);
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+   }
+
+   /* 1300 активный класс мобильного меню*/
+   .m_active {
+      -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+   }
+
+   .m_active ul li {
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+   }
+
+   .m_active ul li:nth-of-type(1) {
+      -webkit-transition-delay: 0.3s;
+      -o-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+   }
+   .m_active ul li:nth-of-type(2) {
+      -webkit-transition-delay: 0.37s;
+      -o-transition-delay: 0.37s;
+      transition-delay: 0.37s;
+   }
+   .m_active ul li:nth-of-type(3) {
+      -webkit-transition-delay: 0.44s;
+      -o-transition-delay: 0.44s;
+      transition-delay: 0.44s;
+   }
+   .m_active ul li:nth-of-type(4) {
+      -webkit-transition-delay: 0.51s;
+      -o-transition-delay: 0.51s;
+      transition-delay: 0.51s;
+   }
+   .m_active ul li:nth-of-type(5) {
+      -webkit-transition-delay: 0.58s;
+      -o-transition-delay: 0.58s;
+      transition-delay: 0.58s;
+   }
+   .m_active ul li:nth-of-type(6) {
+      -webkit-transition-delay: 0.65s;
+      -o-transition-delay: 0.65s;
+      transition-delay: 0.65s;
+   }
+
+   /* 1300 выпадающее меню */
+   .header_menu .sub-menu {
+      display: none;
+      text-transform: inherit;
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      border: 1px solid #ffffff;
+   }
+   .sub-menu li {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      margin: inherit;
+   }
+   .header_menu .sub-menu li {
+      margin-top: 15px;
+   }
+   .sub-menu li a {
+      padding: 0;
+   }
+
+   .sub-menu li:hover {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+   }
+   .sub-menu li:hover a {
+      background: inherit;
+      color: #228de9;
+   }
+
+   .header_menu .dm_active {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      display: block;
+      border: none;
+   }
+   /* 1300 вступительная */
+   .main_y_wrap .wrapper {
+      width: 100%;
+   }
+
+   .main_y_wrap {
+      padding: 0 20px;
+   }
+
+   .m_1 {
+      padding: 0;
+   }
+
+   .m_1_wrapper {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+   }
+
+   /* 1300 Заголовок */
+   .main_h1 {
+      text-align: center;
+      width: 800px;
+      top: 150px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+   .main_h1 h1 {
+      margin-top: 0;
+   }
+
+   /* 1300 Ссылки */
+   .skills_link {
+      left: calc((100% / 7) * 2 + 1px);
+      top: 421px;
+   }
+
+   .port_link {
+      left: calc((100% / 7) * 4 + 1px);
+      top: 421px;
+   }
+
+   .square_link_wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+   }
+
+   /* 1300 добро пожаловать */
+   .m_2_img_wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+   .m_2_par {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+      width: 770px;
+   }
+
+   .m_2_img {
+      max-width: 770px;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      margin-bottom: 40px;
+   }
+
+   .m_2_benef_wrap {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 768px));
+   }
+
+   /* 1300 форма консультации */
+   .advice_form form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+   .advice_form {
+      padding: 45px 0;
+   }
+
+   .advice_form form div {
+      width: 320px;
+      max-width: 100%;
+   }
+
+   /* ------------------------------------------------------------------ */
+   /* 1300 страница портфолио
+   /* ------------------------------------------------------------------ */
+   .pf_1 {
+      padding-bottom: 0;
+   }
+   .work_short_desc_r,
+   .work_short_desc_l {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+      margin: 20px 0;
+   }
+   .work_desc {
+      width: 100%;
+   }
+
+   /* ------------------------------------------------------------------ */
+   /* 1300 страница контакты
+   /* ------------------------------------------------------------------ */
+   .c_1 {
+      padding-bottom: 0;
+   }
+   /* 600 подвал */
+   .footer_wrap {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+   }
+   .footer_menu ul {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+   }
+   .f_tags,
+   .f_projects,
+   .f_other {
+      display: none;
+   }
+   .f_copyright {
+      text-align: left;
+   }.soc_links {
+   justify-content: flex-start;
+   }
+}
+
+/* ------------------------------------------------------------------ */
+/* b. Стили 992.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 992px) {
+   /* 992 общие */
+   .wrapper {
+      padding: 0 10px;
+   }
+
+   .section {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+
+   /* 992 шапка */
+   .main_y_wrap {
+      padding: 0 10px;
+   }
+
+   /* 992 ссылки */
+   .square_link {
+      position: absolute;
+      width: calc(100% / 7 * 2);
+      height: 165px;
+   }
+
+   .skills_link {
+      left: calc((100% / 7) * 1);
+   }
+
+   .port_link {
+      left: calc((100% / 7) * 4);
+   }
+   /* 992 заголовок */
+   .m_1 {
+      padding: 0;
+   }
+
+   .main_h1 h1 {
+      font-size: 60px;
+   }
+   /* ------------------------------------------------------------------ */
+   /* 992 страница услуги
+   /* ------------------------------------------------------------------ */
+   .page_with_side {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+   }
+
+   .page_with_side.section {
+      padding-top: 0;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+   }
+
+   /* 992 страница портфолио */
+   .project_wrap, .pf_grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-row-gap: 60px;
+      width: 100%;
+   }
+   /* 992 страница работа */
+   .site_entry_info {
+      padding: 20px 20px;
+      width: 600px;
+      -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+   }
+
+
+   /* ------------------------------------------------------------------ */
+   /* 992 страница контакты
+   /* ------------------------------------------------------------------ */
+   .full_text {
+      width: 100%;
+   }
+
+   .form_wrap {
+      width: 100%;
+      padding-left: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+}
+/* ------------------------------------------------------------------ */
+/* с. Стили 800.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 800px) {
+   /* 800 заголовок */
+   .main_h1 {
+      font-size: 50px;
+      line-height: normal;
+      top: 100px;
+   }
+
+   .main_h1 h1 {
+      font-size: 50px;
+   }
+   .main_h1 p {
+      padding: 0 20px;
+   }
+
+   /* 800 вступительная*/
+   /* 800 сетка*/
+   .main_x_wrap {
+      padding-top: 50px;
+   }
+   .m_1_wrapper {
+      height: 640px;
+   }
+   /* 800 ссылки */
+   .skills_link,
+   .port_link {
+      top: 354px;
+   }
+
+   .square_link {
+      height: 151px;
+   }
+   /* 800 добро пожаловать */
+   .m_2_img {
+      /*width: 100%;*/
+   }
+   .m_2_benef_img {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   /* 800 обо мне */
+   .ab_1 .m_2_benef_wrap,
+   .m_2_benef_wrap {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 100%));
+   }
+
+
+   /* 800 отзывы */
+   .my_feedback .slick-prev {
+      top: auto;
+      left: 20px;
+      bottom: -18px;
+   }
+
+   .my_feedback .slick-next {
+      top: auto;
+      right: 20px;
+      bottom: -18px;
+   }
+   .с_1_wrapper {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+   }
+
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Стили 768.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+   /* 768 вступительная */
+   /* 768 сетка */
+   .square_link {
+      position: absolute;
+      width: calc((100% / 7 * 2) - 1px);
+   }
+
+   .skills_link {
+      left: calc((100% / 7) + 1px);
+   }
+
+   .port_link {
+      left: calc((100% / 7 * 4) + 1px);
+   }
+
+   /* 768 добро пожаловать */
+   .m_2_benef_wrap {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+   }
+
+   /* 768 последние статьи */
+   .posts_wrap {
+      -ms-grid-columns: auto;
+      grid-template-columns: auto;
+   }
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Стили 600.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 600px) {
+   /* 600 общие */
+   .def_btn {
+      font-size: 14px;
+   }
+   .project_wrap {
+      grid-row-gap: 30px;
+   }
+   /* 600 общие для заголовков h */
+   .def_header {
+      font-size: 26px;
+      line-height: 32px;
+   }
+   .intro_section h1 {
+      line-height: 30px;
+      font-size: 26px;
+   }
+   .def_header h1 {
+      font-size: 26px;
+   }
+
+   .def_header h2 {
+      font-size: 26px;
+   }
+
+   .def_header h3 {
+      font-size: 26px;
+   }
+
+   .def_after_header {
+      font-size: 22px;
+   }
+
+   /* 600 заголовок */
+   .main_h1 h1 {
+      font-size: 40px;
+   }
+
+   /* ------------------------------------------------------------------ */
+   /* 600 страница блог
+   /* ------------------------------------------------------------------ */
+   .post .entry_header h1 {
+      font-size: 30px;
+   }
+
+   /* ------------------------------------------------------------------ */
+   /* 600 страница портфолио
+   /* ------------------------------------------------------------------ */
+   .pf_excerpt {
+      font-size: 16px;
+   }
+   .pf_excerpt h5 {
+      font-size: 18px;
+   }
+   .pf_excerpt span {
+      font-size: 14px;
+   }
+   .pf_excerpt p {
+      font-size: 14px;
+   }
+   /* 600 работа */
+   .intro_section .def_header h1 {
+      color: #f8f8f8;
+      font-size: 33px;
+      line-height: 40px;
+   }
+   .sw_1_wrapper h3 {
+      font-size: 26px;
+   }
+   .site_info {
+      text-align: left;
+   }
+   /* 600 навигация по постам */
+   .post-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+   .post-nav li.prev,
+   .post-nav li.next {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+   }
+   .l_post .post-meta .date {
+      margin-right: 15px;
+      margin-bottom: 5px;
+   }
+   .l_post {
+      flex-direction: column;
+   }
+   .l_post .post-meta {
+      justify-content: flex-start;
+      width: 100%;
+      align-items: flex-start;
+      text-align: left;
+      padding: 0;
+      flex-direction: row;
+   }
+
+
+
+   /* ------------------------------------------------------------------ */
+   /* 600 страница контакты форма
+   /* ------------------------------------------------------------------ */
+   #contact-form form .double div {
+      width: 100%;
+   }
+   #contact-form form div button {
+      width: 100%;
+   }
+}
+/* ------------------------------------------------------------------ */
+/* f. Стили 500.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 500px) {
+   /* 500 общие */
+   .def_btn {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .pf_item i,
+   .l_post .post_img i {
+      font-size: 35px;
+      width: 35px;
+      height: 35px;
+   }
+   .pr_target i {
+      font-size: 25px;
+      width: 25px;
+      height: 25px;
+   }
+
+   /* 500 шапка */
+   .header {
+      height: 50px;
+   }
+   .search_wrap {
+      position: static;
+   }
+
+   .hover_block {
+      top: 2px;
+      left: 10px;
+      width: calc(100% - 20px);
+   }
+
+   /* 500 заголовок */
+   .main_h1 h1 {
+      font-size: 40px;
+      line-height: 40px;
+   }
+   .main_h1 p {
+      font-size: 16px;
+   }
+
+   /* 500 сетка */
+   .square_link {
+      position: absolute;
+      width: calc((100% / 7 * 3) - 1px);
+   }
+
+   .skills_link {
+      left: 1px;
+   }
+
+   .port_link {
+      left: calc((100% / 7) * 4 + 1px);
+   }
+
+   /* 500 добро пожаловать */
+   .m_2_benef_wrap {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+
+   .m_2_img_bottom {
+      font-size: 12px;
+      padding: 10px;
+   }
+
+
+   .item_title span {
+      font-size: 12px;
+   }
+   .item_title h3 {
+      font-size: 16px;
+   }
+   .project_link {
+      font-size: 12px;
+   }
+
+   .pr_target:after {
+      height: 40px;
+      width: 40px;
+   }
+   /* 500 мои отзывы */
+   .client_profile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+   .feedback_item p {
+      font-size: 15px;
+   }
+   /* фото клиента */
+   .client_img {
+      height: 44px;
+      width: 44px;
+   }
+   /* имя клиента */
+   .client_name p {
+      font-size: 14px;
+   }
+
+   .client_name span {
+      font-family: inherit;
+      font-weight: 300;
+      font-size: 12px;
+      margin: 0;
+   }
+
+   /* 500 последние посты */
+   .posts_wrap {
+      padding: 30px 15px;
+   }
+   /* контакты */
+   .с_1_wrapper {
+      padding: 20px; 
+   }
+}
+/* ------------------------------------------------------------------ */
+/* g. Стили 400.
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 400px) {
+   /* 400 общие */
+   body {
+      font-size: 14px;
+   }
+
+   /* 400 заголовок */
+   .main_h1 {
+      font-size: 35px;
+   }
+   .square_link span {
+      font-size: 14px;
+   }
+
+   /* 400 добро пожаловать */
+
+   .m_2_img_bottom {
+      font-size: 10px;
+   }
+   .m_2_par p {
+      font-size: 14px;
+   }
+   .m_2_benef_item span {
+      font-size: 16px;
+   }
+   .m_2_benef_item p {
+      font-size: 14px;
+      padding-left: 25px;
+   }
+
+   .m_2_benef_item span::after {
+      top: 0;
+   }
+
+
+   .item_title {
+      left: 30px;
+   }
+   .project_link {
+      bottom: 20px;
+   }
+   .project_item:hover .item_title {
+      top: 20px;
+   }
+
+   .project_item:hover .project_link {
+      left: 30px;
+   }
+   /* 400 подвал */
+   .footer_menu ul {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+   }
+   /* 400 портфолио */
+   .pf_excerpt {
+      font-size: 14px;
+   }
+   .pf_excerpt h5 {
+      font-size: 18px;
+   }
+   .pf_excerpt p {
+      font-size: 12px;
+   }
+}
